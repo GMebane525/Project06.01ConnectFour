@@ -9,13 +9,16 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.*;
-
+/**
+ * constructor for class ConnectFourTest
+ */
 public class ConnectFourTest {
 	private ConnectFour tester;
 	private Position[] winningPositions;
 	private int[][] array;
 	private int startPos;	//starting position for wins
 	private Position tempPos;
+
 	
 	/**
 	 * Establish the backend data objects

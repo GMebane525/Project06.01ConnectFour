@@ -3,7 +3,6 @@ import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
-
 import javax.swing.*;
 
 /**
@@ -77,10 +76,10 @@ public class ConnectFourGUI extends JFrame implements ActionListener {
 			else if(p1ColorChoices.getSelectedIndex() == p2ColorChoices.getSelectedIndex())
 				directionsLabel.setText("ERROR: player 1 and player 2 may not select identical colors; try again.");
 			else	{
-				directionsLabel.setText("");
 				setupIcons(p1ColorChoices.getSelectedItem().toString(), 
 						p2ColorChoices.getSelectedItem().toString());	//establishes p1/p2 color disks plus red win disks
 				game.newGame();
+				directionsLabel.setText("Player" + ((ConnectFour)game).getCurrentPlayer() + " 's turn");
 				setButtonsState(true);
 				refreshBoard(game.getBoard());
 				topLabel.setText("Click any button in a column to place your disk in that column.");

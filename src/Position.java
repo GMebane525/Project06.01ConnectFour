@@ -1,3 +1,8 @@
+/**
+ * This class initializes a Position object, creates its accessor methods (which allow you to return the Col and Row), and allow you to compare two position objects by using the equals method
+ * @author 24scurria
+ * @version 5/16/23
+ */
 public class Position {
     private int col;
     private int row;
